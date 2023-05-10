@@ -14,7 +14,13 @@ def main(stdscr):
         for j in range(26):
             char = chr(67 + j)
             pad.addstr(char, GREEN_AND_BLUE)
-    pad.refresh(0,0,5,5,25,75)
+    
+    for a in range(50):
+        stdscr.clear()
+        stdscr.refresh()
+        pad.refresh(0, a, 5 +a, a, 10 + a, 25 + a)
+        time.sleep(0.1)
+
     stdscr.getch()
 
 
